@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %} 
+    Login
+{% endblock %}
+
+{% block content %}
+<!-- When submit form, send POST request to backend-->
+<form method = "POST">
+    <!-- Used for Email -->
+    <h3 align = "center">Login</h3>
+    <div class = "form-group">
+        <!-- Place fields in here for signup form-->
+        <label for = "email">Email Address</label>
+        <!-- Need to make sure to define a name bc it's what attribute is called when we pass information into our field into our backend-->
+        <!-- On our backend, we'll be able to access email address by whatever name = -->
+        <input type = "email" class = "form-control" id = "email" name = "email" placeholder = "Enter email"/>
+    </div>
+
+
+    <!-- Used for password-->
+    <div class = "form-group">
+        <!-- Place fields in here for signup form-->
+        <label for = "password">Password</label>
+        <!-- Need to make sure to define a name bc it's what attribute is called when we pass information into our field into our backend-->
+        <!-- On our backend, we'll be able to access email address by whatever name = -->
+        <input type = "password" class = "form-control" id = "password" name = "password" placeholder = "Enter password"/>
+    </div>
+
+
+    <br />
+    <button type = "submit" class = "btn btn-primary">Login</button>
+
+
+</form>
+{% endblock %}
